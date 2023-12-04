@@ -1,0 +1,107 @@
+{
+  "name": "search-buddy",
+  "displayName": "search-buddy",
+  "description": "Search Buddy for VSCode",
+  "version": "1.0.0",
+  "publisher": "souyang",
+  "engines": {
+    "vscode": "^1.30.0"
+  },
+  "activationEvents": [
+    "onCommand:extension.searchByGoogle",
+    "onCommand:extension.searchByStackOverflow",
+    "onCommand:extension.searchByGithub"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "search",
+    "google",
+    "stackoverflow",
+    "github"
+  ],
+  "author": {
+    "name": "Simon Ouyang",
+    "url": "https://www.github.com/souyang"
+  },
+  "icon": "resources/icon.png",
+  "homepage": "https://www.github.com/souyang/search-buddy",
+  "repository": {
+    "type": "git",
+    "url": "https://www.github.com/souyang/search-buddy"
+  },
+  "categories": [
+    "Other"
+  ],
+  "main": "./src/extension.js",
+  "contributes": {
+    "menus": {
+      "editor/context": [
+        {
+          "when": "editorHasSelection",
+          "command": "extension.searchByGoogle",
+          "group": "navigation"
+        },
+        {
+          "when": "editorHasSelection",
+          "command": "extension.searchByStackOverflow",
+          "group": "navigation"
+        },
+        {
+          "when": "editorHasSelection",
+          "command": "extension.searchByGithub",
+          "group": "navigation"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "extension.searchByGoogle",
+        "title": "Search by Google"
+      },
+      {
+        "command": "extension.searchByStackOverflow",
+        "title": "Search by StackOverflow"
+      },
+      {
+        "command": "extension.searchByGithub",
+        "title": "Search by Github"
+      }
+    ],
+    "configuration": {
+      "title": "Search Buddy Config",
+      "type": "object",
+      "properties": {
+        "searchByGoogle.QueryTemplate": {
+          "type": "string",
+          "default": "https://www.google.com/search?q=%SELECTION%",
+          "description": "Search Query For Google"
+        },
+        "searchByStackOverflow.QueryTemplate": {
+          "type": "string",
+          "default": "https://stackoverflow.com/search?q=%SELECTION%",
+          "description": "Search Query For StackOverflow"
+        },
+        "searchByGithub.QueryTemplate": {
+          "type": "string",
+          "default": "https://github.com/search?q=%SELECTION%&type=code",
+          "description": "Search Query For StackOverflow"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^2.2.42",
+    "@types/node": "^10.12.21",
+    "@vscode/vsce": "^2.22.0",
+    "eslint": "^5.13.0",
+    "typescript": "^3.3.1",
+    "vscode": "^1.1.28"
+  },
+  "dependencies": {
+    "@types/vscode": "^1.30.0"
+  }
+}
