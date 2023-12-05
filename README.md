@@ -24,7 +24,7 @@ Simply select the word or function you want to search, then right click and clic
 ![Google-query-results](https://github.com/souyang/search-buddy/blob/master/resources/search-results-stackoverflow.png?raw=true)
 
 # Discussion
-Most development discussions take place on GitHub in this repo, via the [GitHub issue tracker](https://github.com/souyang/search-medium-ai-blog/issues).
+Most development discussions take place on GitHub in this repo, via the [GitHub issue tracker](https://github.com/souyang/search-buddy/issues).
 
 # License
 This project is licensed under the [MIT License](https://opensource.org/license/mit).
