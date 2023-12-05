@@ -10,18 +10,18 @@ Simply select the word or function you want to search, then right click and clic
 # See it in Action
 #### when you select the text and right click you'll see `Search by Google`, `Search by Stackoverflow`, `Search by Github` in your drop-down menu
 
-![drop-down-menu](https://github.com/souyang/https://github.com/souyang/search-buddy/blob/master/resources/dropdown-menu.png?raw=true)
+![drop-down-menu](https://github.com/souyang/search-buddy/blob/main/resources/dropdown-menu.png)
 
 ## How it opens in browser
 
 ### Google
-![Google-query-results](https://github.com/souyang/search-buddy/blob/master/resources/search-results-google.png?raw=true)
+![Google-query-results](https://github.com/souyang/search-buddy/blob/main/resources/search-results-google.png?raw=true)
 
 ### Github
-![Github-query-results](https://github.com/souyang/search-buddy/blob/master/resources/search-results-github.png?raw=true)
+![Github-query-results](https://github.com/souyang/search-buddy/blob/main/resources/search-results-github.png?raw=true)
 
 ### Stackoverflow
-![Google-query-results](https://github.com/souyang/search-buddy/blob/master/resources/search-results-stackoverflow.png?raw=true)
+![Google-query-results](https://github.com/souyang/search-buddy/blob/main/resources/search-results-stackoverflow.png?raw=true)
 
 # Discussion
 Most development discussions take place on GitHub in this repo, via the [GitHub issue tracker](https://github.com/souyang/search-buddy/issues).

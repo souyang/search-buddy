@@ -50,6 +50,11 @@
           "when": "editorHasSelection",
           "command": "extension.searchByGithub",
           "group": "navigation"
+        },
+        {
+          "when": "editorHasSelection",
+          "command": "extension.searchByDuckDuckGo",
+          "group": "navigation"
         }
       ]
     },
@@ -65,6 +70,10 @@
       {
         "command": "extension.searchByGithub",
         "title": "Search by Github"
+      },
+      {
+        "command": "extension.searchByDuckDuckGo",
+        "title": "Search by DuckDuckGo"
       }
     ],
     "configuration": {
@@ -84,8 +93,13 @@
         "searchByGithub.QueryTemplate": {
           "type": "string",
           "default": "https://github.com/search?q=%SELECTION%&type=code",
-          "description": "Search Query For StackOverflow"
-        }
+          "description": "Search Query For Github"
+        },
+        "searchByDuckDuckGo.QueryTemplate": {
+          "type": "string",
+          "default": "https://duckduckgo.com/?q=%SELECTION%&type=code",
+          "description": "Search Query For DuckDuckGo"
+        }  
       }
     }
   },

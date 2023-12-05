@@ -9,6 +9,10 @@ function webSearchByGoogle() {
     webSearch(ConfigSections.searchByGoogle);
 }
 
+function webSearchByDuckDuckGo() {
+    webSearch(ConfigSections.searchByDuckDuckGo);
+}
+
 /**
  * Launches the Search URL using StackOverflow in the default browser.
  * Uses the webSearch function to perform the search.
@@ -113,4 +117,5 @@ module.exports = {
     webSearchByGoogle,
     webSearchByStackOverflow,
     webSearchByGithub,
+    webSearchByDuckDuckGo
 };

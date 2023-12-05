@@ -2,7 +2,7 @@
 
 const vscode = require("vscode");
 const { CommandIds } = require("./config");
-const { webSearchByGoogle, webSearchByStackOverflow, webSearchByGithub } = require("./util");
+const { webSearchByGoogle, webSearchByStackOverflow, webSearchByGithub, webSearchByDuckDuckGo } = require("./util");
 //Activating Function
 function activate(context) {
   // Register the 'searchByGoogle' command
@@ -21,10 +21,18 @@ function activate(context) {
     CommandIds.searchByGithub,
     webSearchByGithub
   );
+
+    // Register the 'searchByDuckDuckGo' command
+      const disposableDuckDuckGo= vscode.commands.registerTextEditorCommand(
+        CommandIds.searchByGithub,
+        webSearchByDuckDuckGo
+      );
+
     // Add the command disposables to the extension context's subscriptions
   context.subscriptions.push(disposableGoogle);
   context.subscriptions.push(disposableStackoverflow);
   context.subscriptions.push(disposableGithub);
+  context.subscriptions.push(disposableDuckDuckGo);
 }
 exports.activate = activate
 
