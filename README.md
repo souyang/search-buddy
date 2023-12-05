@@ -10,7 +10,7 @@ Simply select the word or function you want to search, then right click and clic
 # See it in Action
 #### When you select the text and right click 
 
-![drop-down-menu](https://github.com/souyang/search-buddy/blob/main/resources/dropdown-menu.png)
+![drop-down-menu](https://github.com/souyang/search-buddy/blob/main/resources/dropdown-menu.png?raw=true)
 
 ## How it opens in browser
 
