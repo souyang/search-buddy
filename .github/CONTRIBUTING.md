@@ -25,7 +25,7 @@ Now your file cannot to committed before you fix the relevant code
 
 ## Issue Tracker
 
-If you encounter any bugs, issues, or have feature requests, please [create a new issue](https://github.com/souyang/search-medium-ai-blog/issues/new) on the project's GitHub repository. Provide a clear and descriptive title along with relevant details to help us address the problem or understand your request.
+If you encounter any bugs, issues, or have feature requests, please [create a new issue](https://github.com/souyang/search-buddy/issues/new) on the project's GitHub repository. Provide a clear and descriptive title along with relevant details to help us address the problem or understand your request.
 
 ## Licensing
 

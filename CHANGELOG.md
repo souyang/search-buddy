@@ -14,3 +14,7 @@
 # Version 1.0.4
 
 - Add tags
+
+# Version 1.0.5
+
+- Fix tags and description
