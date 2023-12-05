@@ -1,5 +1,5 @@
 # Search Buddy
-A Simple Extension for VSCode to search code easily in Google, Github and Stackoverflow
+Extension for VSCode to search selected text easily in Google, Github, Stackoverflow, DuckDuckGo!
 
 ## What it does:
 Ever been puzzled by a function, library, or need code examples? Just select the name or keyword and instantly search in your web browser without typing or copying!
@@ -28,6 +28,9 @@ Simply select the word or function you want to search, then right click and clic
 
 # Discussion
 Most development discussions take place on GitHub in this repo, via the [GitHub issue tracker](https://github.com/souyang/search-buddy/issues).
+
+## Contributing Guideline
+We welcome contributions! Please follow our [contribution guidelines](.github/CONTRIBUTING.md).
 
 # License
 This project is licensed under the [MIT License](https://opensource.org/license/mit).

@@ -2,8 +2,8 @@
   "name": "search-buddy",
   "displayName": "Search Buddy",
   "description": "Search selected text in Google, StackOverflow, DuckDuckGo and Github without leaving VSCode",
-  "version": "1.0.4",
-  "tags": [
+  "version": "1.0.5",
+  "keywords": [
     "search",
     "google",
     "stackoverflow",
@@ -25,12 +25,6 @@
     "onCommand:extension.searchByDuckDuckGo"
   ],
   "license": "MIT",
-  "keywords": [
-    "search",
-    "google",
-    "stackoverflow",
-    "github"
-  ],
   "author": {
     "name": "Simon Ouyang",
     "url": "https://www.github.com/souyang"
