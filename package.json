@@ -10,7 +10,8 @@
   "activationEvents": [
     "onCommand:extension.searchByGoogle",
     "onCommand:extension.searchByStackOverflow",
-    "onCommand:extension.searchByGithub"
+    "onCommand:extension.searchByGithub",
+    "onCommand:extension.searchByDuckDuckGo"
   ],
   "license": "MIT",
   "keywords": [
@@ -97,9 +98,9 @@
         },
         "searchByDuckDuckGo.QueryTemplate": {
           "type": "string",
-          "default": "https://duckduckgo.com/?q=%SELECTION%&type=code",
+          "default": "https://duckduckgo.com/?q=%SELECTION%",
           "description": "Search Query For DuckDuckGo"
-        }  
+        }
       }
     }
   },
@@ -108,7 +109,11 @@
     "test": "vscode-test",
     "package": "vsce package",
     "publish": "vsce publish",
-    "prepare": "husky install"
+    "lint": "eslint src --ext js",
+    "prettier": "prettier --write .",
+    "check": "node --check src/extension.js",
+    "prepare": "husky install",
+    "pretest": "npm run lint && npm run prettier && npm run check"
   },
   "devDependencies": {
     "@types/mocha": "^2.2.42",
@@ -116,6 +121,7 @@
     "@vscode/vsce": "^2.22.0",
     "eslint": "^5.13.0",
     "husky": "^8.0.3",
+    "prettier": "^3.1.0",
     "typescript": "^3.3.1",
     "vscode": "^1.1.28"
   },

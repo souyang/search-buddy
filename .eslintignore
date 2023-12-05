@@ -1,0 +1,5 @@
+**/dist/**/*
+**/build/**/*
+**/dist/**/*
+node_modules/**/*
+!.github/workflows/scripts/*

@@ -23,6 +23,9 @@ Simply select the word or function you want to search, then right click and clic
 ### Stackoverflow
 ![Google-query-results](https://github.com/souyang/search-buddy/blob/main/resources/search-results-stackoverflow.png?raw=true)
 
+### DuckDuckGo
+![Google-query-results](https://github.com/souyang/search-buddy/blob/main/resources/search-results-duckduckgo.png?raw=true)
+
 # Discussion
 Most development discussions take place on GitHub in this repo, via the [GitHub issue tracker](https://github.com/souyang/search-buddy/issues).
 

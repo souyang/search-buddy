@@ -1,16 +1,16 @@
-const { CFG_QUERY, ConfigSections } = require("./config");
-const vscode = require("vscode");
+const { CFG_QUERY, ConfigSections } = require('./config');
+const vscode = require('vscode');
 
 /**
  * Launches the Search URL using Google in the default browser.
  * Uses the webSearch function to perform the search.
  */
 function webSearchByGoogle() {
-    webSearch(ConfigSections.searchByGoogle);
+  webSearch(ConfigSections.searchByGoogle);
 }
 
 function webSearchByDuckDuckGo() {
-    webSearch(ConfigSections.searchByDuckDuckGo);
+  webSearch(ConfigSections.searchByDuckDuckGo);
 }
 
 /**
@@ -18,7 +18,7 @@ function webSearchByDuckDuckGo() {
  * Uses the webSearch function to perform the search.
  */
 function webSearchByStackOverflow() {
-    webSearch(ConfigSections.searchByStackOverflow);
+  webSearch(ConfigSections.searchByStackOverflow);
 }
 
 /**
@@ -26,7 +26,7 @@ function webSearchByStackOverflow() {
  * Uses the webSearch function to perform the search.
  */
 function webSearchByGithub() {
-    webSearch(ConfigSections.searchByGithub);
+  webSearch(ConfigSections.searchByGithub);
 }
 
 /**
@@ -35,33 +35,33 @@ function webSearchByGithub() {
  * @param configSection - The configuration section to use.
  */
 function webSearch(configSection) {
-    // Get the currently selected text
-    const selectedText = getSelectedText();
+  // Get the currently selected text
+  const selectedText = getSelectedText();
 
-    // If no text is selected, return early
-    if (!selectedText) {
-        return;
-    }
+  // If no text is selected, return early
+  if (!selectedText) {
+    return;
+  }
 
-    // Encode the selected text for use in the search query
-    const uriText = encodeURI(selectedText);
+  // Encode the selected text for use in the search query
+  const uriText = encodeURI(selectedText);
 
-    // Get the search buddy configuration
-    const searchBuddyCfg = vscode.workspace.getConfiguration(configSection);
+  // Get the search buddy configuration
+  const searchBuddyCfg = vscode.workspace.getConfiguration(configSection);
 
-    // Get the query template from the configuration
-    const queryTemplate = searchBuddyCfg.get(CFG_QUERY);
+  // Get the query template from the configuration
+  const queryTemplate = searchBuddyCfg.get(CFG_QUERY);
 
-    // If the query template is not a string, return early
-    if (typeof queryTemplate !== "string") {
-        return;
-    }
+  // If the query template is not a string, return early
+  if (typeof queryTemplate !== 'string') {
+    return;
+  }
 
-    // Replace the "%SELECTION%" placeholder in the query template with the encoded text
-    const query = queryTemplate.replace("%SELECTION%", uriText);
+  // Replace the "%SELECTION%" placeholder in the query template with the encoded text
+  const query = queryTemplate.replace('%SELECTION%', uriText);
 
-    // Open the search query in the default web browser
-    vscode.commands.executeCommand("vscode.open", vscode.Uri.parse(query));
+  // Open the search query in the default web browser
+  vscode.commands.executeCommand('vscode.open', vscode.Uri.parse(query));
 }
 
 /**
@@ -70,52 +70,58 @@ function webSearch(configSection) {
  * or no selection.
  * Leading and trailing whitespace in the selected text is trimmed,
  * and multiple consecutive whitespaces are replaced with a single space.
- * 
+ *
  * @returns The selected text.
  */
 function getSelectedText() {
-    // Get the active text editor
-    const activeTextEditor = vscode.window.activeTextEditor;
+  // Get the active text editor
+  const activeTextEditor = vscode.window.activeTextEditor;
 
-    // If there is no active text editor, return an empty string
-    if (!activeTextEditor) {
-        return "";
-    }
+  // If there is no active text editor, return an empty string
+  if (!activeTextEditor) {
+    return '';
+  }
 
-    // Get the document text
-    const documentText = activeTextEditor.document.getText();
+  // Get the document text
+  const documentText = activeTextEditor.document.getText();
 
-    // If there is no document text, return an empty string
-    if (!documentText) {
-        return "";
-    }
+  // If there is no document text, return an empty string
+  if (!documentText) {
+    return '';
+  }
 
-    // Get the active selection
-    const activeSelection = activeTextEditor?.selection;
+  // Get the active selection
+  const activeSelection = activeTextEditor.selection;
 
-    // If there is no active selection or the selection is empty, return an empty string
-    if (activeSelection === undefined || activeSelection.isEmpty) {
-        return "";
-    }
+  // If there is no active selection or the selection is empty, return an empty string
+  if (activeSelection === undefined || activeSelection.isEmpty) {
+    return '';
+  }
 
-    // Get the start and end indices of the selection
-    const selectionStartIndex = activeTextEditor.document.offsetAt(activeSelection.start);
-    const selectionEndIndex = activeTextEditor.document.offsetAt(activeSelection.end);
+  // Get the start and end indices of the selection
+  const selectionStartIndex = activeTextEditor.document.offsetAt(
+    activeSelection.start
+  );
+  const selectionEndIndex = activeTextEditor.document.offsetAt(
+    activeSelection.end
+  );
 
-    // Extract the selected text from the document text and trim leading/trailing whitespace
-    let selectedText = documentText.slice(selectionStartIndex, selectionEndIndex).trim();
+  // Extract the selected text from the document text and trim leading/trailing whitespace
+  let selectedText = documentText
+    .slice(selectionStartIndex, selectionEndIndex)
+    .trim();
 
-    // Replace multiple consecutive whitespaces with a single space
-    selectedText = selectedText.replace(/\s\s+/g, " ");
+  // Replace multiple consecutive whitespaces with a single space
+  selectedText = selectedText.replace(/\s\s+/g, ' ');
 
-    // Return the selected text
-    return selectedText;
+  // Return the selected text
+  return selectedText;
 }
 
 // Export the functions
 module.exports = {
-    webSearchByGoogle,
-    webSearchByStackOverflow,
-    webSearchByGithub,
-    webSearchByDuckDuckGo
+  webSearchByGoogle,
+  webSearchByStackOverflow,
+  webSearchByGithub,
+  webSearchByDuckDuckGo
 };
