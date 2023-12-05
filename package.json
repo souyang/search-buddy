@@ -2,7 +2,18 @@
   "name": "search-buddy",
   "displayName": "Search Buddy",
   "description": "Search selected text in Google, StackOverflow, DuckDuckGo and Github without leaving VSCode",
-  "version": "1.0.3",
+  "version": "1.0.4",
+  "tags": [
+    "search",
+    "google",
+    "stackoverflow",
+    "github",
+    "duckduckgo",
+    "web",
+    "souyang",
+    "vscode",
+    "searchbuddy"
+  ],
   "publisher": "souyang",
   "engines": {
     "vscode": "^1.30.0"

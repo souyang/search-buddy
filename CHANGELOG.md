@@ -10,3 +10,7 @@
 # Version 1.0.3
 
 - Fix Image rendering issue
+
+# Version 1.0.4
+
+- Add tags
