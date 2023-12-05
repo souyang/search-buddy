@@ -1,13 +1,19 @@
-export const CommandIds = {
+const CommandIds = {
     searchByGoogle: "extension.searchByGoogle",
     searchByStackOverflow: "extension.searchByStackOverflow",
     searchByGithub: "extension.searchByGithub"
   }
 
-export   const ConfigSections = {
+const ConfigSections = {
     searchByGoogle: "searchByGoogle",
     searchByStackOverflow: "searchByStackOverflow",
     searchByGithub: "searchByGithub"
   }
-  
-export  const CFG_QUERY = "QueryTemplate";
+
+const CFG_QUERY = "QueryTemplate";
+
+module.exports = {
+    CommandIds,
+    ConfigSections,
+    CFG_QUERY
+}

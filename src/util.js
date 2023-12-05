@@ -1,10 +1,11 @@
-import { CFG_QUERY, ConfigSections } from "./config";
-import vscode from "vscode";
+const { CFG_QUERY, ConfigSections } = require("./config");
+const vscode = require("vscode");
+
 /**
  * Launches the Search URL using Google in the default browser.
  * Uses the webSearch function to perform the search.
  */
-export function webSearchByGoogle() {
+function webSearchByGoogle() {
     webSearch(ConfigSections.searchByGoogle);
 }
 
@@ -12,7 +13,7 @@ export function webSearchByGoogle() {
  * Launches the Search URL using StackOverflow in the default browser.
  * Uses the webSearch function to perform the search.
  */
-export function webSearchByStackOverflow() {
+function webSearchByStackOverflow() {
     webSearch(ConfigSections.searchByStackOverflow);
 }
 
@@ -20,10 +21,9 @@ export function webSearchByStackOverflow() {
  * Launches the Search URL using Github in the default browser.
  * Uses the webSearch function to perform the search.
  */
-export  function webSearchByGithub() {
+function webSearchByGithub() {
     webSearch(ConfigSections.searchByGithub);
 }
-
 
 /**
  * Perform a web search using the provided configuration section.
@@ -107,3 +107,10 @@ function getSelectedText() {
     // Return the selected text
     return selectedText;
 }
+
+// Export the functions
+module.exports = {
+    webSearchByGoogle,
+    webSearchByStackOverflow,
+    webSearchByGithub,
+};
