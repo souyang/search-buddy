@@ -1,8 +1,8 @@
 {
   "name": "search-buddy",
-  "displayName": "search-buddy",
-  "description": "Search Buddy for VSCode",
-  "version": "1.0.0",
+  "displayName": "Search Buddy",
+  "description": "Search selected text in Google, StackOverflow and Github without leaving VSCode",
+  "version": "1.0.1",
   "publisher": "souyang",
   "engines": {
     "vscode": "^1.30.0"
@@ -10,7 +10,8 @@
   "activationEvents": [
     "onCommand:extension.searchByGoogle",
     "onCommand:extension.searchByStackOverflow",
-    "onCommand:extension.searchByGithub"
+    "onCommand:extension.searchByGithub",
+    "onCommand:extension.searchByDuckDuckGo"
   ],
   "license": "MIT",
   "keywords": [
@@ -50,6 +51,11 @@
           "when": "editorHasSelection",
           "command": "extension.searchByGithub",
           "group": "navigation"
+        },
+        {
+          "when": "editorHasSelection",
+          "command": "extension.searchByDuckDuckGo",
+          "group": "navigation"
         }
       ]
     },
@@ -65,6 +71,10 @@
       {
         "command": "extension.searchByGithub",
         "title": "Search by Github"
+      },
+      {
+        "command": "extension.searchByDuckDuckGo",
+        "title": "Search by DuckDuckGo"
       }
     ],
     "configuration": {
@@ -84,7 +94,12 @@
         "searchByGithub.QueryTemplate": {
           "type": "string",
           "default": "https://github.com/search?q=%SELECTION%&type=code",
-          "description": "Search Query For StackOverflow"
+          "description": "Search Query For Github"
+        },
+        "searchByDuckDuckGo.QueryTemplate": {
+          "type": "string",
+          "default": "https://duckduckgo.com/?q=%SELECTION%",
+          "description": "Search Query For DuckDuckGo"
         }
       }
     }
@@ -93,13 +108,20 @@
     "postinstall": "node ./node_modules/vscode/bin/install",
     "test": "vscode-test",
     "package": "vsce package",
-    "publish": "vsce publish"
+    "publish": "vsce publish",
+    "lint": "eslint src --ext js",
+    "prettier": "prettier --write .",
+    "check": "node --check src/extension.js",
+    "prepare": "husky install",
+    "pretest": "npm run lint && npm run prettier && npm run check"
   },
   "devDependencies": {
     "@types/mocha": "^2.2.42",
     "@types/node": "^10.12.21",
     "@vscode/vsce": "^2.22.0",
     "eslint": "^5.13.0",
+    "husky": "^8.0.3",
+    "prettier": "^3.1.0",
     "typescript": "^3.3.1",
     "vscode": "^1.1.28"
   },
