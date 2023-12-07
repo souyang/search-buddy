@@ -1,6 +1,6 @@
 {
-    "extession.searchByGoogle": "透過 Google 搜尋",
-    "extession.searchByStackOverflow": "透過 StackOverflow 搜尋",
-    "extession.searchByGithub": "透過 Github 搜尋",
-    "extession.searchByDuckDuckGo": "透過 Duckduckgo 搜尋"
+    "extension.searchByGoogle": "透過 Google 搜尋",
+    "extension.searchByStackOverflow": "透過 StackOverflow 搜尋",
+    "extension.searchByGithub": "透過 Github 搜尋",
+    "extension.searchByDuckDuckGo": "透過 Duckduckgo 搜尋"
 }

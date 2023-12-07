@@ -1,6 +1,6 @@
 {
-    "extession.searchByGoogle": "Vyhledávání podle Google",
-    "extession.searchByStackOverflow": "Vyhledávání podle Stackoverflow",
-    "extession.searchByGithub": "Vyhledávání podle Github",
-    "extession.searchByDuckDuckGo": "Vyhledávání podle DuckDuckGo"
+    "extension.searchByGoogle": "Vyhledávání podle Google",
+    "extension.searchByStackOverflow": "Vyhledávání podle Stackoverflow",
+    "extension.searchByGithub": "Vyhledávání podle Github",
+    "extension.searchByDuckDuckGo": "Vyhledávání podle DuckDuckGo"
 }

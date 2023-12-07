@@ -67,19 +67,19 @@
     "commands": [
       {
         "command": "extension.searchByGoogle",
-        "title": "%extession.searchByGoogle%"
+        "title": "%extension.searchByGoogle%"
       },
       {
         "command": "extension.searchByStackOverflow",
-        "title": "%extession.searchByStackOverflow%"
+        "title": "%extension.searchByStackOverflow%"
       },
       {
         "command": "extension.searchByGithub",
-        "title": "%extession.searchByGithub%"
+        "title": "%extension.searchByGithub%"
       },
       {
         "command": "extension.searchByDuckDuckGo",
-        "title": "%extession.searchByDuckDuckGo%"
+        "title": "%extension.searchByDuckDuckGo%"
       }
     ],
     "configuration": {
@@ -89,22 +89,22 @@
         "searchByGoogle.QueryTemplate": {
           "type": "string",
           "default": "https://www.google.com/search?q=%SELECTION%",
-          "description": "%extession.searchByGoogle%"
+          "description": "%extension.searchByGoogle%"
         },
         "searchByStackOverflow.QueryTemplate": {
           "type": "string",
           "default": "https://stackoverflow.com/search?q=%SELECTION%",
-          "description": "%extession.searchByStackOverflow%"
+          "description": "%extension.searchByStackOverflow%"
         },
         "searchByGithub.QueryTemplate": {
           "type": "string",
           "default": "https://github.com/search?q=%SELECTION%&type=code",
-          "description": "%extession.searchByGithub%"
+          "description": "%extension.searchByGithub%"
         },
         "searchByDuckDuckGo.QueryTemplate": {
           "type": "string",
           "default": "https://duckduckgo.com/?q=%SELECTION%",
-          "description": "%extession.searchByDuckDuckGo%"
+          "description": "%extension.searchByDuckDuckGo%"
         }
       }
     }

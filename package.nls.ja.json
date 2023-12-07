@@ -1,6 +1,6 @@
 {
-    "extession.searchByGoogle": "Googleで検索",
-    "extession.searchByStackOverflow": "StackOverflowで検索",
-    "extession.searchByGithub": "Githubで検索",
-    "extession.searchByDuckDuckGo": "DuckDuckGoで検索"
+    "extension.searchByGoogle": "Googleで検索",
+    "extension.searchByStackOverflow": "StackOverflowで検索",
+    "extension.searchByGithub": "Githubで検索",
+    "extension.searchByDuckDuckGo": "DuckDuckGoで検索"
 }
