@@ -111,14 +111,14 @@
   },
   "scripts": {
     "postinstall": "node ./node_modules/vscode/bin/install",
-    "test": "vscode-test",
-    "package": "npm run pretest && vsce package",
-    "publish": "vsce publish",
+    "test": "npx vscode-test",
+    "package": "yarn pretest && vsce package",
+    "publish": "yarn pretest && vsce publish",
     "lint": "npx eslint . --ext .ts --fix",
     "prettier": "prettier --write .",
     "prepare": "husky install",
     "build": "tsc -p ./",
-    "pretest": "npm run build && npm run lint && npm run prettier"
+    "pretest": "yarn build && yarn lint && yarn prettier"
   },
   "devDependencies": {
     "@types/mocha": "^2.2.42",
@@ -133,7 +133,8 @@
     "husky": "^8.0.3",
     "prettier": "^3.1.0",
     "typescript": "^5.3.3",
-    "vscode": "^1.1.28"
+    "vscode": "^1.1.28",
+    "vscode-test": "^1.6.1"
   },
   "dependencies": {
     "@types/vscode": "^1.30.0",
