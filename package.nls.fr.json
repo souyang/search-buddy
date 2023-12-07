@@ -1,6 +1,6 @@
 {
-    "extession.searchByGoogle": "Recherche par Google",
-    "extession.searchByStackOverflow": "Recherche par StackOverflow",
-    "extession.searchByGithub": "Recherche par Github",
-    "extession.searchByDuckDuckGo": "Recherche par DuckDuckGo"
+    "extension.searchByGoogle": "Recherche par Google",
+    "extension.searchByStackOverflow": "Recherche par StackOverflow",
+    "extension.searchByGithub": "Recherche par Github",
+    "extension.searchByDuckDuckGo": "Recherche par DuckDuckGo"
 }

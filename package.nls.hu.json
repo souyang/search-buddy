@@ -1,6 +1,6 @@
 {
-    "extession.searchByGoogle": "Keresés a Google szerint",
-    "extession.searchByStackOverflow": "Keresés a Stackoverflow szerint",
-    "extession.searchByGithub": "Keresés a Github szerint",
-    "extession.searchByDuckDuckGo": "Keresés a DuckDuckGo szerint"
+    "extension.searchByGoogle": "Keresés a Google szerint",
+    "extension.searchByStackOverflow": "Keresés a Stackoverflow szerint",
+    "extension.searchByGithub": "Keresés a Github szerint",
+    "extension.searchByDuckDuckGo": "Keresés a DuckDuckGo szerint"
 }
