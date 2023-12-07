@@ -38,7 +38,7 @@
   "categories": [
     "Other"
   ],
-  "main": "./src/extension.js",
+  "main": "./out/extension",
   "contributes": {
     "menus": {
       "editor/context": [
@@ -67,19 +67,19 @@
     "commands": [
       {
         "command": "extension.searchByGoogle",
-        "title": "Search by Google"
+        "title": "%extession.searchByGoogle%"
       },
       {
         "command": "extension.searchByStackOverflow",
-        "title": "Search by StackOverflow"
+        "title": "%extession.searchByStackOverflow%"
       },
       {
         "command": "extension.searchByGithub",
-        "title": "Search by Github"
+        "title": "%extession.searchByGithub%"
       },
       {
         "command": "extension.searchByDuckDuckGo",
-        "title": "Search by DuckDuckGo"
+        "title": "%extession.searchByDuckDuckGo%"
       }
     ],
     "configuration": {
@@ -89,22 +89,22 @@
         "searchByGoogle.QueryTemplate": {
           "type": "string",
           "default": "https://www.google.com/search?q=%SELECTION%",
-          "description": "Search Query For Google"
+          "description": "%extession.searchByGoogle%"
         },
         "searchByStackOverflow.QueryTemplate": {
           "type": "string",
           "default": "https://stackoverflow.com/search?q=%SELECTION%",
-          "description": "Search Query For StackOverflow"
+          "description": "%extession.searchByStackOverflow%"
         },
         "searchByGithub.QueryTemplate": {
           "type": "string",
           "default": "https://github.com/search?q=%SELECTION%&type=code",
-          "description": "Search Query For Github"
+          "description": "%extession.searchByGithub%"
         },
         "searchByDuckDuckGo.QueryTemplate": {
           "type": "string",
           "default": "https://duckduckgo.com/?q=%SELECTION%",
-          "description": "Search Query For DuckDuckGo"
+          "description": "%extession.searchByDuckDuckGo%"
         }
       }
     }
@@ -112,25 +112,31 @@
   "scripts": {
     "postinstall": "node ./node_modules/vscode/bin/install",
     "test": "vscode-test",
-    "package": "vsce package",
+    "package": "npm run pretest && vsce package",
     "publish": "vsce publish",
-    "lint": "eslint src --ext js",
+    "lint": "npx eslint . --ext .ts --fix",
     "prettier": "prettier --write .",
-    "check": "node --check src/extension.js",
     "prepare": "husky install",
-    "pretest": "npm run lint && npm run prettier && npm run check"
+    "build": "tsc -p ./",
+    "pretest": "npm run build && npm run lint && npm run prettier"
   },
   "devDependencies": {
     "@types/mocha": "^2.2.42",
     "@types/node": "^10.12.21",
+    "@typescript-eslint/eslint-plugin": "^6.13.2",
+    "@typescript-eslint/parser": "^6.13.2",
+    "@vscode/l10n-dev": "^0.0.30",
     "@vscode/vsce": "^2.22.0",
-    "eslint": "^5.13.0",
+    "eslint": "^8.55.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.29.0",
     "husky": "^8.0.3",
     "prettier": "^3.1.0",
-    "typescript": "^3.3.1",
+    "typescript": "^5.3.3",
     "vscode": "^1.1.28"
   },
   "dependencies": {
-    "@types/vscode": "^1.30.0"
+    "@types/vscode": "^1.30.0",
+    "@vscode/l10n": "^0.0.17"
   }
 }

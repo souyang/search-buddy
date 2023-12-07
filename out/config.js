@@ -1,21 +1,17 @@
-const CommandIds = {
+'use strict';
+Object.defineProperty(exports, '__esModule', { value: true });
+exports.CFG_QUERY = exports.ConfigSections = exports.CommandIds = void 0;
+exports.CommandIds = {
   searchByGoogle: 'extension.searchByGoogle',
   searchByStackOverflow: 'extension.searchByStackOverflow',
   searchByGithub: 'extension.searchByGithub',
   searchByDuckDockGo: 'extension.searchByDuckDuckGo'
 };
-
-const ConfigSections = {
+exports.ConfigSections = {
   searchByGoogle: 'searchByGoogle',
   searchByStackOverflow: 'searchByStackOverflow',
   searchByGithub: 'searchByGithub',
   searchByDuckDuckGo: 'searchByDuckDuckGo'
 };
-
-const CFG_QUERY = 'QueryTemplate';
-
-module.exports = {
-  CommandIds,
-  ConfigSections,
-  CFG_QUERY
-};
+exports.CFG_QUERY = 'QueryTemplate';
+//# sourceMappingURL=config.js.map
