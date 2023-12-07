@@ -2,7 +2,7 @@
   "name": "search-buddy",
   "displayName": "Search Buddy",
   "description": "Search selected text in Google, StackOverflow, DuckDuckGo and Github without leaving VSCode",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "keywords": [
     "search",
     "google",
