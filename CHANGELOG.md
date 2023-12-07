@@ -18,3 +18,9 @@
 # Version 1.0.5
 
 - Fix tags and description
+
+# Version 1.0.6
+
+- Update code to typescript
+
+
