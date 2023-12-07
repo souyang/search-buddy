@@ -13,13 +13,15 @@ This tool supports all available locales in VSCode. [locale full list](https://c
 
 #### When you select the text and right click 
 
-Dropdown Menu (English)
+- Sample Dropdown Menu (English)
+
 ![drop-down-menu](https://github.com/souyang/search-buddy/blob/main/resources/dropdown-menu.png?raw=true)
 
-Dropdown Menu (Spanish)
+- Sample Dropdown Menu (Spanish)
+
 ![drop-down-menu](https://github.com/souyang/search-buddy/blob/main/resources/dropdown-menu-spanish.png?raw=true)
 
-Dropdown Menu (Simplified Chinese)
+- Sample Dropdown Menu (Simplified Chinese)
 ![drop-down-menu](https://github.com/souyang/search-buddy/blob/main/resources/dropdown-menu-chinese.png?raw=true)
 
 ## How it opens in browser
